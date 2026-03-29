@@ -1,114 +1,179 @@
 @charset "UTF-8";
-html{
-    font-size: 12px;
+
+html {
+    font-size: 16px;
     font-family: serif;
 }
-h1{
-    font-size: 1.7em;
+
+h1 {
+    font-size: clamp(1em, 6vw, 20px)
 }
-h1 span{
+
+h1 span {
     font-size: 0.6em;
 }
-h2{
+
+h2 {
     width: 100%;
     margin-bottom: 50px;
-    font-size: clamp(1.5em, 6vw, 2.5em);
+    font-size: clamp(1.5em, 6vw, 36px);
     text-align: center;
 }
-.inare{
+
+.inare {
     padding: 70px 0;
-    margin: 0 20px;
+    margin: 0 auto;
     max-width: 1000px;
 }
-p+p{
+
+.inare-in {
+    margin: 0 20px;
+}
+
+p+p {
     margin-top: 15px;
 }
+
 /* ヘッダー */
-header{
+
+header {
     width: 100%;
     padding: 30px;
     text-align: center;
 }
-header img{
+
+header img {
     width: 100%;
     margin: 50px 0;
 }
-.toho{
+
+.toho {
     padding: 15px 0;
     background-color: #e5e5eb;
 }
-.KV{
+
+.KV {
     width: 100;
     height: 300px;
     background: url(../img/mainvisual.jpg) center center no-repeat;
     background-size: 120%;
 }
+
 /* 診療時間 */
-.zikan{
-    background: linear-gradient(to right, rgba(245,253,255,1), rgba(223,237,241,1));
+
+.zikan {
+    background: linear-gradient(to right, rgba(245, 253, 255, 1), rgba(223, 237, 241, 1));
 }
-table{
+
+.timeline {
     width: 100%;
     border: 1px solid #e5e5eb;
     border-collapse: collapse;
     background-color: #fff;
 }
-th{
-    width: 80px;
+
+.timeline tr {
+    width: 100%;
+}
+
+.timeline th {
+    width: clamp(60px, 20vw, 200px);
     text-align: right;
 }
-td{
+
+.timeline td {
     text-align: center;
     vertical-align: middle;
 }
-th,td{
+
+.timeline th,
+.timeline td {
     padding: 10px;
     border: 1px solid #e5e5eb;
 }
-.zikan p{
+
+.zikan p {
     margin-top: 15px;
 }
+
 /* 感染防止対策について */
+
 /* 当院の特徴 */
-.tokutyou{
+
+.tokutyou {
     background: url(../img/bg_room.jpg) calc(100% - 20%) center no-repeat;
     background-size: auto 100%;
     background-clip: content-box;
     overflow: hidden;
 }
-h3{
+
+h3 {
     color: blue;
     border-bottom: 3px solid #bbcdee;
     font-size: 1.3em;
     display: inline-block;
 }
-.tokutyou section{
+
+.tokutyou section {
     padding: 20px 30px;
     background-color: rgba(255, 255, 255, 0.7);
     border: 1px solid #e5e5eb;
 }
-.tokutyou li+li{
+
+.tokutyou li+li {
     margin-top: 20px;
 }
-.tokutyou h3+p{
+
+.tokutyou h3+p {
     margin-top: 20px;
 }
+
 /* お問い合わせ */
-.soudan{
-    background: linear-gradient(to right, rgba(245,253,255,1), rgba(223,237,241,1));
+.soudan {
+    background: linear-gradient(to right, rgba(245, 253, 255, 1), rgba(223, 237, 241, 1));
 }
-.contact{
+
+.contact {
     margin: 30px 0;
     display: flex;
     justify-content: center;
 }
-.contact button{
-    padding: 10px 90px;
+
+.contact a {
+    padding: 10px 50px;
     border: 1px solid #2268bc;
     border-radius: 30px;
     color: blue;
     background-color: #fff;
 }
-.contact button:hover{
+
+.contact a:hover {
     background-color: #bbcdee;
+}
+
+@media screen and (min-width: 768px) {
+    .contact a {
+        padding: 10px 90px;
+    }
+}
+
+/* フッター */
+footer .logo {
+    text-align: center;
+}
+
+footer .logo img {
+    max-width: 300px;
+    width: 100%;
+}
+
+.cpr {
+    padding: 10px 0;
+    text-align: center;
+    background-color: #2268bc;
+}
+
+.cpr small {
+    font-size: 14px;
+    color: #fff;
 }
