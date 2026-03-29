@@ -6,11 +6,13 @@ html {
 }
 
 h1 {
-    font-size: clamp(1em, 6vw, 20px)
+    font-size: clamp(1em, 6vw, 22px);
+    line-height: 1.5em;
 }
 
 h1 span {
     font-size: 0.6em;
+    line-height: 1em;
 }
 
 h2 {
@@ -34,11 +36,17 @@ p+p {
     margin-top: 15px;
 }
 
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: clamp(1em, 1.9vw, 22px);
+    }
+}
+
 /* ヘッダー */
 
-header {
+.title {
     width: 100%;
-    padding: 30px;
+    padding: 20px;
     text-align: center;
 }
 
@@ -53,10 +61,33 @@ header img {
 }
 
 .KV {
-    width: 100;
+    width: 100%;
     height: 300px;
     background: url(../img/mainvisual.jpg) center center no-repeat;
     background-size: 120%;
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        display: flex;
+        justify-content: center;
+    }
+
+    .title {
+        width: 40%;
+        padding: 50px;
+    }
+
+    .KV {
+        width: 60%;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .title {
+        padding: 70px;
+    }
 }
 
 /* 診療時間 */
@@ -128,6 +159,17 @@ h3 {
     margin-top: 20px;
 }
 
+@media screen and (min-width: 768px) {
+    .tokutyou section {
+        width: 700px;
+    }
+
+    .tokutyou li:nth-child(even) {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
 /* お問い合わせ */
 .soudan {
     background: linear-gradient(to right, rgba(245, 253, 255, 1), rgba(223, 237, 241, 1));
@@ -159,6 +201,7 @@ h3 {
 
 /* フッター */
 footer .logo {
+    margin: 20px 0;
     text-align: center;
 }
 
